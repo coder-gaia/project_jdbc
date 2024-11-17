@@ -1,12 +1,11 @@
 package application;
 
-
 import model.dao.DAOFactory;
 import model.dao.SellerDAO;
 import model.entities.Department;
 import model.entities.Seller;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -31,5 +30,10 @@ public class Main {
         for(Seller obj : list){
             System.out.println(obj);
         }
+
+        System.out.println("\n === TEST nº04: seller insertion ===");
+        Seller newSeller = new Seller(null, "Greg", "gre@gmail.com", new Date(), 4000.0, department);
+        sellerDAO.insert(newSeller);
+        System.out.println("Inserted! New id: " + newSeller.getId());
     }
 }
