@@ -42,10 +42,10 @@ public class Main {
         seller = sellerDAO.findById(1);
         seller.setName("Bob Yellowstone");
         sellerDAO.update(seller);
-        System.out.println("Updated finished!");
+        System.out.println("Update finished!");
 
         System.out.println("\n === TEST 06: seller delete ===");
-        System.out.println("Insert the selle id for deletion: ");
+        System.out.println("Insert the seller id for deletion: ");
         int idToBeDeleted = sc.nextInt();
         sellerDAO.deleteById(idToBeDeleted);
         System.out.println("Deleted!");
